@@ -1,0 +1,11 @@
+package com.bjsxt.height.design015.my;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Master master = new Master(new Worker, 20);
+		
+		
+	}
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+E:\workspace-eclipse-kepler\.metadata\.plugins\org.eclipse.jdt.core
+1675400313.index
+4256694746.index
+4208313795.index
+349938927.index

@@ -1,0 +1,53 @@
+package com.bjsxt.height.design015.my;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+public class Master {
+
+	//1.承装任务的集合
+	private ConcurrentLinkedQueue<Task> taskQueue = new ConcurrentLinkedQueue<Task>();
+	
+	//2.承装workers的集合
+	private Map<String, Thread> workers = new HashMap<String, Thread>();
+	
+	//3.承装每一个worker的执行结果集
+	private ConcurrentHashMap<String, Object> resultMap = new ConcurrentHashMap<String, Object>();
+	
+	/**
+	 * master 掌控worker的创建
+	 * worker是一个实现Runnable接口的对象，可供多个线程同时使用并行执行
+	 * @param worker
+	 * @param workerCount 线程数
+	 */
+	public Master(Worker worker, int workerThreadCount) {
+		
+		//
+		worker.setTaskQueue(taskQueue);
+		worker.setResultMap(resultMap);
+		
+		for(int i=0; i<workerThreadCount; i++) {
+			workers.put("worker_id_" + i, new Thread(worker));
+		}
+	}
+
+
+	/**
+	 * 提交任务
+	 * @param task
+	 */
+	public void submit(Task task) {
+		this.taskQueue.add(task);
+	}
+
+	/**
+	 * 开始执行任务
+	 */
+	public void execute() {
+		for(Map.Entry<String, Thread> entry : workers.entrySet()){
+			entry.getValue().start();
+		}
+	}
+}

@@ -1,0 +1,6 @@
+1505359315166	Extract local variable 'master'
+1505359385286	Extract local variable 'task'
+1505359711442	Extract local variable 'input'
+1505360683394	Extract local variable 'result'
+1505360778607	Extract local variable 'result'
+1505360900777	Extract local variable 'start'

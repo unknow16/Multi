@@ -1,0 +1,19 @@
+package com.bjsxt.height.design015.my;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Master master = new Master(new Worker(), 20);
+		
+		for(int i=0; i<20; i++) {
+			Task task = new Task();
+			task.setId(i);
+			task.setName("task_name=" + i);
+			
+			master.submit(task);
+		}
+		
+		master.execute();
+	}
+}
