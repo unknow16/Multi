@@ -22,6 +22,13 @@ public class UseThreadPoolExecutor1 {
 		 * 若线程数大于maximumPoolSize，则执行拒绝策略。或其他自定义方式。
 		 * 
 		 */	
+		
+		/**
+		 * 使用无界队列时，当有新任务到来时，系统的线程数小于corePoolSize时，则新建线程执行任务，
+		 * 达到corePoolSize后，就不会继续增加，
+		 * 若后续仍有新的任务加入，而有没有空闲的线程资源，则任务直接进入队列等待，
+		 * 若任务创建和处理的速度差异很大，无界队列会保持快速增长，直到耗尽系统内存
+		 */
 		ThreadPoolExecutor pool = new ThreadPoolExecutor(
 				1, 				//coreSize
 				2, 				//MaxSize
@@ -29,8 +36,8 @@ public class UseThreadPoolExecutor1 {
 				TimeUnit.SECONDS, 
 				new ArrayBlockingQueue<Runnable>(3)			//指定一种队列 （有界队列）
 				//new LinkedBlockingQueue<Runnable>()
-				, new MyRejected()
-				//, new DiscardOldestPolicy()
+				//, new MyRejected()
+				, new DiscardOldestPolicy()
 				);
 		
 		MyTask mt1 = new MyTask(1, "任务1");

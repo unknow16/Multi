@@ -23,6 +23,12 @@ public class UseThreadPoolExecutor2 implements Runnable{
 		}
 	}
 	
+	/**
+	 * 使用无界队列时，当有新任务到来时，系统的线程数小于corePoolSize时，则新建线程执行任务，
+	 * 达到corePoolSize后，就不会继续增加，
+	 * 若后续仍有新的任务加入，而有没有空闲的线程资源，则任务直接进入队列等待，
+	 * 若任务创建和处理的速度差异很大，无界队列会保持快速增长，直到耗尽系统内存
+	 */
 	public static void main(String[] args) throws Exception{
 		//System.out.println(Runtime.getRuntime().availableProcessors());
 		BlockingQueue<Runnable> queue = 

@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 class Temp extends Thread {
     public void run() {
         System.out.println("run");
+        System.currentTimeMillis();
     }
 }
 

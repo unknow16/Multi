@@ -11,7 +11,10 @@ public class UseExecutors {
 		//ExecutorService pool = Executors.newSingleThreadExecutor()
 		
 		//cache fixed single
-		
+		Executors.newFixedThreadPool(1);
+		Executors.newSingleThreadExecutor();
+		Executors.newCachedThreadPool();
+		Executors.newScheduledThreadPool(10);
 		
 		
 	}

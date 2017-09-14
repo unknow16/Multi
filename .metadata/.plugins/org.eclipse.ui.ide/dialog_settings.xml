@@ -12,9 +12,11 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\并发编程代码\Multi_006"/>
+			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\并发编程代码\Multi_005"/>
+			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\并发编程代码\Multi_004"/>
 			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\并发编程代码\Multi_003"/>
 			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\并发编程代码\Multi_002"/>
-			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\并发编程代码\Multi_001"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
