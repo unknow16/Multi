@@ -1,0 +1,32 @@
+package com.fuyi.bio;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+
+public class MyServerHandler implements Runnable {
+
+	private Socket socket;
+	
+	public MyServerHandler(Socket socket){
+		this.socket = socket;
+	}
+	
+	@Override
+	public void run() {
+		OutputStream outputSteam = null;
+		InputStream inputSteam = null;
+		try {
+			outputSteam = socket.getOutputStream();
+			inputSteam = socket.getInputStream();
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

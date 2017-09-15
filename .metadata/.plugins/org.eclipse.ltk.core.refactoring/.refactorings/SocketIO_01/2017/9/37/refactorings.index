@@ -1,0 +1,17 @@
+1505447033890	Move file
+1505448406171	Extract local variable 'serverSocket'
+1505448503344	Extract local variable 'accept'
+1505448865713	Extract local variable 'inputStream'
+1505448913672	Inline local variable 'inputStream'
+1505448929015	Convert local variable 'outputSteam' to field
+1505449093297	Extract local variable 'socket'
+1505449139515	Extract local variable 'inputStream'
+1505449146441	Extract local variable 'outputStream'
+1505452698877	Extract local variable 'printWriter'
+1505453070218	Extract local variable 'byteArrayOutputStream'
+1505453746861	Extract local variable 'r'
+1505453925696	Extract local variable 'outputStream'
+1505454122728	Extract local variable 'r'
+1505454685751	Extract local variable 'socket'
+1505456273297	Extract local variable 'myHandlerThreadPool'
+1505456519826	Move file

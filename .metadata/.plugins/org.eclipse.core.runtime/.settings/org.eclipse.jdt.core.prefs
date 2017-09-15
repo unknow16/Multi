@@ -1,7 +1,12 @@
+JRE_LIB=E\:/develop/jdk1.6.0_26_x64/jdk1.6.0_26/jre/lib/rt.jar
+JRE_SRC=E\:/develop/jdk1.6.0_26_x64/jdk1.6.0_26/src.zip
 eclipse.preferences.version=1
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=E\:/develop/jdk1.6.0_26_x64/jdk1.6.0_26/jre/lib/rt.jar
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=E\:/develop/jdk1.6.0_26_x64/jdk1.6.0_26/src.zip
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=E\:/develop/eclipse-jee-kepler-SR2-win32-x86_64/eclipse
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=E\:/develop/jre1.8.0_25/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=E\:/develop/eclipse-jee-kepler-SR2-win32-x86_64/eclipse/plugins/org.junit_4.11.0.v201303080030/
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/Administrator/.m2/repository
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6

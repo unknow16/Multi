@@ -1,0 +1,18 @@
+package com.fuyi.bio;
+
+import java.net.Socket;
+
+public class MyServerHandler implements Runnable {
+
+	private Socket socket;
+	
+	public MyServerHandler(Socket socket){
+		this.socket = socket;
+	}
+	
+	@Override
+	public void run() {
+		
+	}
+
+}
