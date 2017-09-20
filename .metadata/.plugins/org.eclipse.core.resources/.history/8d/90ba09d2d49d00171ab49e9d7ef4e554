@@ -1,0 +1,52 @@
+package com.fuyi.test;
+
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+
+public class Server {
+
+	public static void main(String[] args) throws Exception {
+		// 1.第一个线程组用于接受Client连接的
+		EventLoopGroup bossGroup = new NioEventLoopGroup();
+		// 2.第二个线程组用于实际业务处理操作的
+		EventLoopGroup workerGroup = new NioEventLoopGroup();
+
+		// 3.创建一个辅助类,对server进行一系类的配置
+		ServerBootstrap b = new ServerBootstrap();
+		b.group(bossGroup, workerGroup)
+		// 指定使用NioServerSocketChannel这种类型的通道
+				.channel(NioServerSocketChannel.class)
+				// 使用childHandle去绑定具体的事件处理器
+				.childHandler(new ChannelInitializer<SocketChannel>() {
+					@Override
+					protected void initChannel(SocketChannel sc)
+							throws Exception {
+						sc.pipeline().addLast(new ServerHandler());
+					}
+				})
+				/**
+				 * 服务器端tcp内核模块维护有2个队列，可称为A,B 客户端向服务器connect时，会发送带有SYN标志的包（第一次握手）
+				 * 服务器收到客户端发来的SYN后，会想客户端发送SYN ACK确认（第二次握手）
+				 * 此时TCP内核模块把客户端链接加入到A队列中，然后服务器收到客户端发来的ACK时（第三次握手）
+				 * TCP内核模块会把客户端链接从A队列移到B队列，链接完成，应用程序的accept会返回
+				 * 也就是说accept从B队列中取出完成三次握手的链接
+				 */
+				// 设置tcp缓冲区
+				.option(ChannelOption.SO_BACKLOG, 128)
+				// 保持链接
+				.childOption(ChannelOption.SO_KEEPALIVE, true);
+
+		// 绑定指定端口进行监听
+		ChannelFuture f = b.bind(4321).sync();
+		f.channel().closeFuture().sync();
+
+		workerGroup.shutdownGracefully();
+		bossGroup.shutdownGracefully();
+	}
+}

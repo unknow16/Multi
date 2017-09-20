@@ -1,0 +1,7 @@
+package com.fuyi.test;
+
+import io.netty.channel.ChannelHandlerAdapter;
+
+public class ServerHandler extends ChannelHandlerAdapter {
+
+}

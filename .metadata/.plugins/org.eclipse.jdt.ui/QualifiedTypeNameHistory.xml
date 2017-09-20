@@ -26,4 +26,16 @@
 <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
 <fullyQualifiedTypeName name="com.fuyi.bio.MyHandlerThreadPool"/>
 <fullyQualifiedTypeName name="com.fuyi.bio.MyServerHandler"/>
+<fullyQualifiedTypeName name="io.netty.buffer.ByteBuf"/>
+<fullyQualifiedTypeName name="com.fuyi.test.ServerHandler"/>
+<fullyQualifiedTypeName name="io.netty.channel.ChannelOption"/>
+<fullyQualifiedTypeName name="com.fuyi.test.Server"/>
+<fullyQualifiedTypeName name="io.netty.util.ReferenceCountUtil"/>
+<fullyQualifiedTypeName name="io.netty.bootstrap.Bootstrap"/>
+<fullyQualifiedTypeName name="io.netty.channel.socket.nio.NioSocketChannel"/>
+<fullyQualifiedTypeName name="io.netty.channel.socket.SocketChannel"/>
+<fullyQualifiedTypeName name="com.fuyi.test.ClientHandler"/>
+<fullyQualifiedTypeName name="io.netty.channel.ChannelHandlerAdapter"/>
+<fullyQualifiedTypeName name="io.netty.buffer.Unpooled"/>
+<fullyQualifiedTypeName name="io.netty.channel.ChannelFutureListener"/>
 </qualifiedTypeNameHistroy>
