@@ -1,7 +1,0 @@
-package com.fuyi.bio;
-
-import java.util.concurrent.ThreadPoolExecutor;
-
-public class MyHandlerThreadPool extends ThreadPoolExecutor {
-
-}

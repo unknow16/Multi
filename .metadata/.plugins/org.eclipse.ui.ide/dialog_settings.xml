@@ -12,11 +12,11 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\尚学堂架构师资料\004_JVM相关资料\Test"/>
+			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\004_JVM相关资料\Jvm"/>
 			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\003_网络编程代码及资料\SocketIO_03"/>
 			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\003_网络编程代码及资料\SocketIO_02"/>
 			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\005_互联网架构视频第二期(008)（更多视频教程关注微信公众号【菜鸟要飞】\SocketIO_01"/>
-			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\004_互联网架构视频第二期(007)（更多视频教程关注微信公众号【菜鸟要飞】\Disruptor"/>
-			<item value="E:\android\168\尚学堂架构师（更多视频教程关注微信公众号【菜鸟要飞】\资料（更多视频教程关注微信公众号【菜鸟要飞】\并发编程代码\Multi_006"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

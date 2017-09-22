@@ -32,7 +32,7 @@ public class Client {
 		});
 		
 		ChannelFuture cf = b.connect("127.0.0.1", 8765).sync();
-		
+		Thread.sleep(5000);
 		for(int i = 0; i < 5; i++ ){
 			Req req = new Req();
 			req.setId("" + i);
@@ -48,6 +48,7 @@ public class Client {
 			cf.channel().writeAndFlush(req);
 		}
 
+		Thread.sleep(5000);
 		cf.channel().closeFuture().sync();
 		group.shutdownGracefully();
 	}

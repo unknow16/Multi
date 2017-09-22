@@ -40,7 +40,7 @@ public class HttpFileServer {
 					    new HttpFileServerHandler(url));
 				}
 			    });
-		    ChannelFuture future = b.bind("192.168.1.200", port).sync();
+		    ChannelFuture future = b.bind("192.168.0.153", port).sync();
 		    System.out.println("HTTP文件目录服务器启动，网址是 : " + "http://192.168.1.200:"  + port + url);
 		    future.channel().closeFuture().sync();
 		} finally {

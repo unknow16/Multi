@@ -21,7 +21,7 @@ public class ServerHandler extends ChannelHandlerAdapter{
 		System.out.println("Server : " + req.getId() + ", " + req.getName() + ", " + req.getRequestMessage());
 		byte[] attachment = GzipUtils.ungzip(req.getAttachment());
 		
-		String path = System.getProperty("user.dir") + File.separatorChar + "receive" +  File.separatorChar + "001.jpg";
+		String path = System.getProperty("user.dir") + File.separatorChar + "receive" +  File.separatorChar + "0099.jpg";
         FileOutputStream fos = new FileOutputStream(path);
         fos.write(attachment);
         fos.close();
