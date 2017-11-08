@@ -20,6 +20,9 @@ public class Client implements Runnable{
 	
 	public void write(String request){
 		try {
+			// Feture.get();
+			// Waits if necessary for the computation to complete, and then retrieves its result.
+			// 如果需要，等待计算完成，然后检索结果。
 			asc.write(ByteBuffer.wrap(request.getBytes())).get();
 			read();
 		} catch (Exception e) {

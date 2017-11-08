@@ -17,6 +17,8 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
 	private void read(final AsynchronousSocketChannel asc) {
 		//读取数据
 		ByteBuffer buf = ByteBuffer.allocate(1024);
+		
+		//异步监听读，当数据可读时进行回调
 		asc.read(buf, buf, new CompletionHandler<Integer, ByteBuffer>() {
 			@Override
 			public void completed(Integer resultSize, ByteBuffer attachment) {
@@ -28,6 +30,8 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
 				String resultData = new String(attachment.array()).trim();
 				System.out.println("Server -> " + "收到客户端的数据信息为:" + resultData);
 				String response = "服务器响应, 收到了客户端发来的数据: " + resultData;
+				
+				//收到，读完数据后，响应
 				write(asc, response);
 			}
 			@Override
@@ -42,6 +46,9 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
 			ByteBuffer buf = ByteBuffer.allocate(1024);
 			buf.put(response.getBytes());
 			buf.flip();
+			
+			// Waits if necessary for the computation to complete, and then retrieves its result.
+			// 如果需要，等待计算完成，然后检索结果。
 			asc.write(buf).get();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
