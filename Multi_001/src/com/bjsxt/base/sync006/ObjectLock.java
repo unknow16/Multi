@@ -63,10 +63,17 @@ public class ObjectLock {
 				objLock.method3();
 			}
 		});
+		Thread t4 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				objLock.method3();
+			}
+		});
 		
 		t1.start();
 		t2.start();
 		t3.start();
+		t4.start();
 		
 		
 	}

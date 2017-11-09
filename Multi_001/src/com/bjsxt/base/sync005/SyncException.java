@@ -16,7 +16,7 @@ import javax.management.RuntimeErrorException;
  */
 public class SyncException {
 
-	private int i = 0;
+	private int i = 0;	
 	public synchronized void operation(){
 		while(true){
 			try {
