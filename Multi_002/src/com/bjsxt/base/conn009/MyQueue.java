@@ -41,7 +41,7 @@ public class MyQueue {
 			//2 计数器累加
 			count.incrementAndGet();
 			//3 通知另外一个线程（唤醒）
-			lock.notify();
+			lock.notify(); //释放锁
 			System.out.println("新加入的元素为:" + obj);
 		}
 	}

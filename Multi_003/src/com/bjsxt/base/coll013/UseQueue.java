@@ -70,17 +70,23 @@ public class UseQueue {
 			@Override
 			public void run() {
 				try {
+					System.out.println("wait read...");
 					System.out.println(q.take());
+					
+					System.out.println("read done");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
 		});
 		t1.start();
+		
+		Thread.sleep(2000);
 		Thread t2 = new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
+				System.out.println("write...");
 				q.add("asdasd");
 			}
 		});

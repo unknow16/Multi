@@ -29,7 +29,7 @@ public class AtomicUse {
 		final AtomicUse au = new AtomicUse();
 
 		List<Thread> ts = new ArrayList<Thread>();
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 10; i++) {
 			ts.add(new Thread(new Runnable() {
 				@Override
 				public void run() {
