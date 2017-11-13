@@ -19,7 +19,8 @@ public class Worker implements Runnable {
 	@Override
 	public void run() {
 		while(true){
-			Task input = this.workQueue.poll();
+			Task input = this.workQueue.poll(); //Retrieves and removes the head of this queue, or returns null if this queue is empty.
+
 			if(input == null) break;
 			Object output = handle(input);
 			this.resultMap.put(Integer.toString(input.getId()), output);
